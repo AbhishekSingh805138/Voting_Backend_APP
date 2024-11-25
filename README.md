@@ -28,6 +28,7 @@ This is a backend application for a voting system where users can vote for candi
 **Candidates**
 **Get Candidates**
 - GET /candidates: Get the list of candidates
+  <br>
 **Add Candidate**
 - POST /candidates: Add a new candidate (Admin only)
 
