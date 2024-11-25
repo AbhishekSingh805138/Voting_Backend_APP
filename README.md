@@ -9,16 +9,18 @@ This is a backend application for a voting system where users can vote for candi
 - Admin cannot vote
 
 **Technologies Used**
+***
 - Node.js
 - Express.js
 - MongoDB
 - JSON Web Tokens (JWT) for authentication
 
 **Installation**
+***
 1.Clone the repository:https://github.com/AbhishekSingh805138/Voting_Backend_APP.git
 
 **API Endpoints**
-
+***
 **Sign Up**
 - POST /signup: Sign up a user
 
@@ -26,10 +28,9 @@ This is a backend application for a voting system where users can vote for candi
 - POST /login: Login a user
 
 **Candidates**
+***
 **Get Candidates**
 - GET /candidates: Get the list of candidates
-  
-  <br>
   
 **Add Candidate**
 - POST /candidates: Add a new candidate (Admin only)
