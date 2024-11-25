@@ -37,6 +37,20 @@ This is a backend application for a voting system where users can vote for candi
 **Delete Candidate**
 - DELETE /candidates/:id: Delete a candidate by ID (Admin only)
 
+**Voting**
+**Get Vote Count**
+- GET /candidates/vote/count: Get the count of votes for each candidate
+
+**Vote for Candidate**
+- POST /candidates/vote/:id: Vote for a candidate (User only)
+
+**User Profile**
+**Get Profile**
+- GET /users/profile: Get user profile information
+**Change Password**
+  -PUT /users/profile/password: Change user password
+
+
 
 
 
