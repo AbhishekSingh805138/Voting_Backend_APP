@@ -20,6 +20,7 @@ const checkAdminRole = async (userID) => {
 router.post('/', jwtAuthMiddleware, async (req, res) =>{
     try{
         if(!(await checkAdminRole(req.user.id)))
+            //yha console.log lga sakyte hai
             return res.status(403).json({message: 'user does not have admin role'});
 
         const data = req.body // Assuming the request body contains the candidate data
@@ -86,7 +87,7 @@ router.delete('/:candidateID', jwtAuthMiddleware, async (req, res)=>{
 
 // let's start voting
 router.post('/vote/:candidateID', jwtAuthMiddleware, async (req, res)=>{
-    // no admin can vote
+    // no admin can vote keep in in mind
     // user can only vote once
     
     candidateID = req.params.candidateID;
@@ -111,7 +112,7 @@ router.post('/vote/:candidateID', jwtAuthMiddleware, async (req, res)=>{
         }
 
         // Update the Candidate document to record the vote
-        candidate.votes.push({user: userId})
+        candidate.votes.push({user: userId})// updating vote count
         candidate.voteCount++;
         await candidate.save();
 
@@ -148,7 +149,7 @@ router.get('/vote/count', async (req, res) => {
 });
 
 // Get List of all candidates with only name and party fields
-router.get('/', async (req, res) => {
+router.get('/candidate', async (req, res) => {
     try {
         // Find all candidates and select only the name and party fields, excluding _id
         const candidates = await Candidate.find({}, 'name party -_id');
