@@ -56,9 +56,7 @@ This is a backend application for a voting system where users can vote for candi
 
 **Get Profile**
 - GET /users/profile: Get user profile information
-
 <br>
-
 **Change Password**
   -PUT /users/profile/password: Change user password
 
